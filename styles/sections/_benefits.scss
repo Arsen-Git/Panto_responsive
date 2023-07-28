@@ -1,0 +1,62 @@
+.benefits {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include media(1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  &__title {
+    max-width: 269px;
+    display: inline-block;
+  }
+  &__card__container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 60px;
+    padding-right: 60px;
+    @include media(1024px) {
+      flex-direction: row;
+      margin-top: 0px;
+      padding-right: 0px;
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    @include media(1024px) {
+      gap: 14px;
+      max-width: 284px;
+    }
+    & a {
+      width: 120px;
+    }
+  }
+  &__hightlight {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+
+    color: $black;
+
+    opacity: 0.9;
+  }
+  &__text {
+    max-height: 90px;
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 185%;
+
+    color: $black;
+
+    opacity: 0.8;
+  }
+}

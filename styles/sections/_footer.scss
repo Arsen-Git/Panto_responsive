@@ -1,0 +1,121 @@
+.foo {
+  position: relative;
+  background-color: $gray;
+  &__content {
+    max-width: 1064px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    @include media(1024px) {
+      flex-direction: row;
+      gap: 150px;
+      padding-top: 120px;
+      padding-bottom: 56px;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    &__text {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 160%;
+
+      color: $black;
+
+      opacity: 0.8;
+      @include media(1024px) {
+        width: 293px;
+      }
+    }
+  }
+  &__links__list {
+    box-sizing: border-box;
+    height: 146px;
+    width: 133px;
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 45px;
+      row-gap: 16px;
+      margin-top: 42px;
+      @include media(1024px) {
+        column-gap: 0;
+        justify-content: space-between;
+        row-gap: 120px;
+        margin-top: 0;
+      }
+    }
+    &__name {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 26px;
+
+      letter-spacing: -0.231818px;
+
+      color: #f6973f;
+    }
+    &__item {
+      padding-top: 16px;
+      &__social {
+        padding-top: 16px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        & li {
+          padding-top: 0;
+        }
+        &__img {
+          height: 20px;
+          width: 20px;
+          object-fit: cover;
+        }
+      }
+    }
+    &__link {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 160%;
+
+      color: $black;
+
+      opacity: 0.8;
+    }
+  }
+  &__terms {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    gap: 16px;
+    & a {
+      text-align: end;
+    }
+    @include media(1024px) {
+      width: 100%;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 22px;
+    }
+  }
+  &__rights {
+    text-align: center;
+    margin-top: 45px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+
+    letter-spacing: -0.204545px;
+
+    color: #1e2833;
+
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    @include media(1024px) {
+      max-width: 1064px;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.experiences {
+  padding-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  @include media(1024px) {
+    padding-top: 314px;
+    gap: 141px;
+    flex-direction: row-reverse;
+    margin: 0 0 264px 0;
+    padding-left: 0;
+  }
+  @include media(1441px) {
+    margin: 0 auto;
+    margin-bottom: 264px;
+    padding-left: 80px;
+  }
+  &__card {
+    flex: 1;
+    @include media(1024px) {
+      max-width: 556px;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  &__title {
+    max-width: 334px;
+    @include media(768px) {
+      max-width: 413px;
+    }
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 63px;
+    text-transform: capitalize;
+
+    color: $black;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 185%;
+
+    color: $black;
+    opacity: 0.8;
+  }
+  &__img {
+    flex: 1.05;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      @include media(768px) {
+        border-radius: 0px 20px 20px 0px;
+      }
+    }
+  }
+}

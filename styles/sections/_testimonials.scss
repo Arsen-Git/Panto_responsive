@@ -1,0 +1,134 @@
+.testimonials {
+  margin-top: 80px;
+  @include media(1024px) {
+    margin-top: 261px;
+  }
+  &__title {
+    margin-top: 15px;
+    margin-bottom: 36px;
+    @include media(768px) {
+      margin-bottom: 50px;
+    }
+  }
+  &__card {
+    flex: 1;
+    @include media(768px) {
+      max-width: 370px;
+    }
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 18.1182px;
+    min-height: 432px;
+    padding: 16px;
+    &__container {
+      position: relative;
+      margin-bottom: 162px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      @include media(650px) {
+        margin-bottom: 240px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      @include media(768px) {
+        justify-content: space-between;
+      }
+      min-height: 206px;
+      position: relative;
+      align-self: end;
+      background-color: $white;
+      border-radius: 18.1182px;
+    }
+    &__img {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 50px;
+      border-top: 8px solid $white;
+      border-left: 8px solid $white;
+      border-right: 8px solid $white;
+      border-radius: 50%;
+    }
+    &__img-blured {
+      top: 0;
+      z-index: -1;
+      outline: none;
+      opacity: 0.5;
+      filter: blur(5px);
+      object-fit: cover;
+    }
+    &__info {
+      margin: 39px 23px 15px;
+    }
+    &__name {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: center;
+      text-transform: capitalize;
+
+      color: $black;
+    }
+    &__position {
+      margin-top: 1px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: center;
+      color: $black;
+      opacity: 0.4;
+    }
+    &__text {
+      max-height: 63px;
+      overflow: hidden;
+      margin-top: 8px;
+      margin-bottom: 4px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+      color: $black;
+      opacity: 0.8;
+    }
+    &__star {
+      &-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        gap: 7.5px;
+      }
+      &-disactive path {
+        opacity: 0.3;
+      }
+    }
+  }
+  &__arrow {
+    display: flex;
+    top: 105%;
+    @include media(650px) {
+      top: 35%;
+    }
+    &-left {
+      left: 20%;
+      @include media(650px) {
+        left: 20px;
+      }
+    }
+    &-right {
+      right: 20%;
+      @include media(650px) {
+        right: 20px;
+      }
+    }
+  }
+}
